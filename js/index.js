@@ -16,7 +16,8 @@ const handleClick = function (buttonValue) {
       expression[1],
       parseFloat(expression[2])
     )
-    resultsDiv.textContent = result + expression[3]
+    resultsDiv.textContent =
+      checkResultLength(result.toString()) + expression[3]
   }
 
   if (buttonValue === "=") {
@@ -25,7 +26,8 @@ const handleClick = function (buttonValue) {
       expression[1],
       parseFloat(expression[2])
     )
-    resultsDiv.textContent = result
+
+    resultsDiv.textContent = checkResultLength(result.toString())
 
     if (expression.length > 3) {
       resultsDiv.textContent += expression[3]
@@ -54,8 +56,7 @@ const divide = function (num1, num2) {
 }
 
 const clearResults = function () {
-  results = ""
-  resultsDiv.textContent = results
+  resultsDiv.textContent = ""
 }
 
 const operate = function (operand1, operator, operand2) {
@@ -71,13 +72,20 @@ const operate = function (operand1, operator, operand2) {
 
     case "/":
       if (operand2 === 0) {
-        alert("Error: Division by zero")
+        resultsDiv.textContent = "Div by zero"
         break
       }
       return divide(operand1, operand2)
 
     default:
-      alert("Error: Invalid operator")
+      resultsDiv.textContent = "NaN"
       break
   }
+}
+
+const checkResultLength = function (result) {
+  if (result.length > 10) {
+    return result.slice(0, 10)
+  }
+  return result
 }

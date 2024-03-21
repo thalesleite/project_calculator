@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -14,13 +18,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2;
-    width: 200px;
+    width: 300px;
 
     .results {
       width: 100%;
-      height: 40px;
+      height: 60px;
       background-color: #cccccc;
-      font-size: 30px;
+      font-size: 52px;
       margin-bottom: 10px;
       padding: 10px;
     }
@@ -28,10 +32,12 @@
     .numbers {
       margin-bottom: 10px;
       button {
-        font-size: 20px;
-        height: 60px;
-        width: 64px;
+        font-size: 24px;
+        height: 80px;
+        width: 97.2px;
         margin-bottom: 2px;
+        background-color: rgb(53, 48, 103);
+        color: white;
       }
 
       .zero {
@@ -43,19 +49,24 @@
       margin-bottom: 10px;
 
       button {
-        height: 47px;
-        width: 47px;
+        font-size: 24px;
+        height: 72px;
+        width: 72px;
+        background-color: aquamarine;
       }
     }
 
     .calculate {
-      height: 40px;
+      font-size: 24px;
+      height: 50px;
       width: 100%;
       margin-bottom: 5px;
+      background-color: aquamarine;
     }
 
     .clear {
-      height: 40px;
+      font-size: 18px;
+      height: 50px;
       width: 100%;
     }
   }
