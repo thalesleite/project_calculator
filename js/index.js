@@ -1,9 +1,17 @@
 const resultsDiv = document.querySelector(".results")
 
 document.querySelectorAll(".btn").forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     handleClick(event.target.value)
   })
+})
+
+document.addEventListener("keydown", (event) => {
+  const keysAllowed = "1234567890+-*/+="
+  if (keysAllowed.includes(event.key) || event.keyCode === 13) {
+    const value = event.keyCode === 13 ? "=" : event.key
+    handleClick(value)
+  }
 })
 
 const handleClick = function (buttonValue) {
