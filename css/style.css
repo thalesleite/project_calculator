@@ -18,30 +18,43 @@
 
     .results {
       width: 100%;
-      height: 60px;
+      height: 40px;
       background-color: #cccccc;
+      font-size: 30px;
       margin-bottom: 10px;
+      padding: 10px;
     }
 
     .numbers {
       margin-bottom: 10px;
-      input {
+      button {
+        font-size: 20px;
         height: 60px;
-        width: 60px;
-        margin: 2px;
+        width: 64px;
+        margin-bottom: 2px;
+      }
+
+      .zero {
+        width: 100%;
       }
     }
 
     .operators {
       margin-bottom: 10px;
 
-      input {
-        height: 45px;
-        width: 45px;
+      button {
+        height: 47px;
+        width: 47px;
       }
     }
 
     .calculate {
+      height: 40px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .clear {
       height: 40px;
       width: 100%;
     }

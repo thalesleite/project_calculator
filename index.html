@@ -8,28 +8,30 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">The Calculator</h1>
+      <h1 class="title">Calculator</h1>
 
       <div class="calculator">
         <div class="results"></div>
         <div class="numbers">
-          <input type="button" value="1" />
-          <input type="button" value="2" />
-          <input type="button" value="3" />
-          <input type="button" value="4" />
-          <input type="button" value="5" />
-          <input type="button" value="6" />
-          <input type="button" value="7" />
-          <input type="button" value="8" />
-          <input type="button" value="9" />
+          <button class="btn" value="1">1</button>
+          <button class="btn" value="2">2</button>
+          <button class="btn" value="3">3</button>
+          <button class="btn" value="4">4</button>
+          <button class="btn" value="5">5</button>
+          <button class="btn" value="6">6</button>
+          <button class="btn" value="7">7</button>
+          <button class="btn" value="8">8</button>
+          <button class="btn" value="9">9</button>
+          <button class="btn zero" value="0">0</button>
         </div>
         <div class="operators">
-          <input type="button" value="+" />
-          <input type="button" value="-" />
-          <input type="button" value="x" />
-          <input type="button" value="/" />
+          <button class="btn" value="+">+</button>
+          <button class="btn" value="-">-</button>
+          <button class="btn" value="*">x</button>
+          <button class="btn" value="/">/</button>
         </div>
-        <input class="calculate" type="button" value="=" />
+        <button class="calculate" onclick="operate()">=</button>
+        <button class="clear" onclick="clearResults()">Clear</button>
       </div>
     </div>
     <script src="js/index.js"></script>
