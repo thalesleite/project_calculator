@@ -22,7 +22,7 @@ const handleClick = function (buttonValue) {
     const result = operate(
       parseFloat(expression[0]),
       expression[1],
-      parseFloat(expression[2])
+      parseFloat(expression[2]) 
     )
     resultsDiv.textContent =
       checkResultLength(result.toString()) + expression[3]
